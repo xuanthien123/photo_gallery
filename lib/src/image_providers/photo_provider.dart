@@ -11,7 +11,7 @@ class PhotoProvider extends ImageProvider<PhotoProvider> {
   final String? mimeType;
 
   @override
-  ImageStreamCompleter loadImage(key, decode) {
+  ImageStreamCompleter loadBuffer(key, decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key, decode),
       scale: 1.0,

@@ -17,7 +17,7 @@ class ThumbnailProvider extends ImageProvider<ThumbnailProvider> {
   final bool? highQuality;
 
   @override
-  ImageStreamCompleter loadImage(key, decode) {
+  ImageStreamCompleter loadBuffer(key, decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key, decode),
       scale: 1.0,
